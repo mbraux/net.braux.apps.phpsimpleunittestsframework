@@ -7,8 +7,14 @@ By the way, this framework is also for simple tests. If you plan complex tests, 
 
 Simple to use :
 ---------------
+Put this code in a new file :
 <?php
-
+require_once 'PHPSimpleUnitTestsFramework.php';
+/**
+ * Sample test for PHPSimpleUnitTestsFramework.
+ * @author martial@braux.net
+ * See the LICENSE file for legal details.
+ */
 class MyClassTest extends PHPSimpleUnitTestsFramework {
   
   function testMyFirstMethod() {
@@ -20,6 +26,8 @@ class MyClassTest extends PHPSimpleUnitTestsFramework {
   function testMySecondMethod() {
     $myVar = array('Another test');
     $this->assertIsArray('myVar should be an array.', $myVar);
+    $this->assertNotIsArray('myVar should be an array. This test must fail...', $myVar);
+    
   }
 
 }
@@ -30,7 +38,7 @@ $tests->run();
 ?>
 
 Now call the page you just created in your browser, see the results.
-Each method whose name begins with the word 'test', will be run as a test.
+Each method whose name begins with the word 'test', will be run as a test, others will be ignored.
 
 
 Simple to deploy :
