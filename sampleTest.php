@@ -1,4 +1,5 @@
 <?php
+require_once 'PHPSimpleUnitTestsFramework.php';
 /**
  * Sample test for PHPSimpleUnitTestsFramework.
  * @author martial@braux.net
@@ -15,6 +16,8 @@ class MyClassTest extends PHPSimpleUnitTestsFramework {
   function testMySecondMethod() {
     $myVar = array('Another test');
     $this->assertIsArray('myVar should be an array.', $myVar);
+    $this->assertNotIsArray('myVar should be an array. This test must fail...', $myVar);
+    
   }
 
 }
