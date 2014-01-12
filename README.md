@@ -13,7 +13,7 @@ Put this code in a new file :
 require_once 'PHPSimpleUnitTestsFramework.php';
 
 /**
- *Sample test for PHPSimpleUnitTestsFramework.
+ * Sample test for PHPSimpleUnitTestsFramework.
  * @author martial@braux.net
  * See the LICENSE file for legal details.
  */
