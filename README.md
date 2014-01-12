@@ -8,10 +8,12 @@ By the way, this framework is also for simple tests. If you plan complex tests, 
 Simple to use :
 ---------------
 Put this code in a new file :
+``` PHP
 <?php
 require_once 'PHPSimpleUnitTestsFramework.php';
+
 /**
- * Sample test for PHPSimpleUnitTestsFramework.
+ *Sample test for PHPSimpleUnitTestsFramework.
  * @author martial@braux.net
  * See the LICENSE file for legal details.
  */
@@ -36,7 +38,7 @@ $tests = new MyClassTest();
 $tests->run();
 
 ?>
-
+```
 Now call the page you just created in your browser, see the results.
 Each method whose name begins with the word 'test', will be run as a test, others will be ignored.
 
